@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="CSS/style.css">
+  
+
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  
+
+  
+
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <script src="JS/myscript.js"></script>
+</head>
+<body>
+  
+  <main>
+      <div class="container-fluid">
+        <form>
+        <div id="header"> 
+
+            <span id="alertError1" class="flex">
+              
+              <label for="dayInput" class="date">DAY</label>
+              <input id="dayInput" name="day" class="data-box" type="number" required  placeholder="DD" maxlength="2" min="01" max="31"
+              onkeydown="if (event.keyCode === 13) calculateAge()" >
+            
+            </span>
+            <span class="flex">
+            
+              <label for="monthInput" class="date">MONTH</label>
+              <input id="monthInput" name="month" class="data-box" type="number" required placeholder="MM" maxlength="12" min="01" max="12" onkeydown="if (event.keyCode === 13) calculateAge()" >
+            
+            </span>
+            <span class="flex">
+              
+              <label for="yearInput" class="date"> YEAR</label>
+              <input id="yearInput" name="year" class="data-box" type="number" required placeholder="YYYY" maxlength="4" step="none"
+              onkeydown="if (event.keyCode === 13) calculateAge()" >
+            </span>
+        </div>
+      </form>
+        <div class="divider-icon">
+        <hr>
+        <svg xmlns="http://www.w3.org/2000/svg" width="66" height="64" viewBox="21 -15 5 80">
+        <g fill="none" stroke="#FFF" stroke-width="2"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg>
+        </div>
+        <div id="data-container">
+        
+       <span class="data-result"><span id="resultYear" class="dash dash-year" >--</span><span class="data">years</span></span>
+        <span class="data-result"><span id="resultMonth" class="dash dash-month">--</span><span class="data">months</span></span>
+        <span class="data-result"><span id="resultDay" class="dash dash-days">--</span><span class="data">days</span></span> 
+        </div>
+        
+      </div>
+
+
+ 
+
+
+ 
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Nohely Pasoz</a>.
+  </div>
+</main>
+</body>
+</html>

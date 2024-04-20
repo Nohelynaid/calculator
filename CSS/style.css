@@ -1,0 +1,132 @@
+body{
+    margin:0;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: hsl(0, 0%, 94%)!important;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    overflow: hidden;
+    width:100%;
+}
+
+/*MAIN CONTAINER*/
+main{
+    width:550px;
+    height: 410px;
+    margin:8% auto;
+    background-color:  hsl(0, 0%, 100%);
+    border-radius: 1rem 1rem 8rem 1rem;
+}
+
+
+/*INPUT DATA CONTAINER*/
+#header{
+    display: grid;
+    grid-template-columns:8rem 8rem 8rem;
+    padding: 25px 30px 5px 15px;
+    margin-bottom: 10px;
+}
+
+.data-box{
+    display: flex;
+    width:95px;
+    height:40px;
+    border-color:hsl(0, 1%, 44%) ;
+    border-style:outset;
+    border: 1px solid #ccc;  /*set the border to 1px width and light grey color */
+    border-radius: 4px;
+    font-size: 22px;
+    color:hsl(0, 0%, 8%);
+    font-weight: bolder;
+}
+
+input:focus-within{
+    outline: none;
+    border-color:hsl(259, 100%, 65%);
+    caret-color:hsl(259, 100%, 65%) ; /*changes the cursor color*/
+}
+
+.date{
+    color:hsl(0, 1%, 44%);
+    font-family: 'Poppins', sans-serif;
+    font-size:10px;
+    letter-spacing: 2px;
+}
+
+::placeholder{
+    font-size: 22px;
+    color:hsl(0, 1%, 44%);
+    font-weight: bolder;
+}
+
+
+
+/*This is to eliminate up and dwn buttons default in the input type number*/
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input {
+  -moz-appearance: textfield;
+}
+
+
+/*DIVIDER CONTAINER*/
+
+.divider-icon{
+    display: flex;
+    height: 45px;
+}
+
+hr{
+    border: 1px solid hsl(0, 0%, 94%);
+    width:400px;
+    margin-left: 20px !important;
+}
+
+svg{
+    background-color: hsl(259, 100%, 65%);
+    border-radius: 50%;
+    position:relative;
+    bottom: 12px;
+}
+
+svg:hover{
+    background-color: hsl(0, 0%, 8%);
+}
+
+/*RESULTS CONTAINER*/
+
+#data-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: 68px;
+    font-style: italic;
+    padding-left:20px;
+    line-height: 4rem;
+    margin-bottom: 50px;
+}
+
+.data{
+    font-weight: 800;
+    color:hsl(0, 0%, 8%);
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.dash:first-child{
+font-weight: bolder;
+  color:hsl(259, 100%, 65%);
+  margin-right: 3px;
+}
+
+
+@media (max-width: 375px){
+    main{
+        width:300;
+        height: 700px;
+    }
+}
